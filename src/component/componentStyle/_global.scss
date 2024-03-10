@@ -1,0 +1,32 @@
+$font-sans-serif: 'Poppins', sans-serif;
+
+$success-500: #28c76f;
+
+$blue-50: hsl(211, 100%, 95%);
+$blue-100: hsl(211, 100%, 85%);
+
+$gray-50: hsl(180, 6%, 97%);
+$gray-100: hsl(210, 4%, 90%);
+$gray-600: hsl(216, 3%, 61%);
+$gray-200: hsl(220, 4%, 85%);
+$gray-700: hsl(216, 2%, 48%);
+
+
+
+
+* {
+    margin: 0;padding: 0;
+    font-family: $font-sans-serif;
+}
+
+svg {
+    min-width: 24px;
+}
+
+main {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

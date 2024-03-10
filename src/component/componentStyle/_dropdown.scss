@@ -1,0 +1,174 @@
+@use './global' as *;
+
+.select-tab {
+    // display: flex;
+    // place-content: start;
+    position: relative;
+    display: flex;
+    width: 100%;
+  
+  
+  
+  
+    .selectBtn {
+      background-color: $gray-100;
+      padding:.2em .8em;
+    //   margin: 1em;
+      width: 300px;
+      height: 50px;
+      border-radius: .5rem;
+      border: 2px $gray-100 solid;
+      cursor: pointer;
+      display: flex;
+      gap: -1;
+  
+      &:hover {
+        background-color: $gray-200;
+      }
+  
+      .button-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+  
+      strong {
+        font-size: 14px;
+      }
+    
+      .muted-text {
+        font-size: 12px;
+        margin: 0;
+        color: $gray-700;
+        margin-top: auto !important;
+    
+      }
+    }
+  
+    
+  }
+  
+  
+  .select-drop-content {
+    margin-bottom: 1em;
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    z-index: 1;
+    border-radius: 0.5rem;
+    padding:0.5em 0.4em .8em .9em;
+    background-color: white;
+    width: 300px;
+    overflow-y: scroll;
+    border-radius: .5rem;
+    border: $gray-100 solid 2px;
+    scrollbar-gutter: stable;
+  
+    &::-webkit-scrollbar {
+      width: 8px; 
+    }
+    
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      border: 2px solid $blue-100;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: $blue-50; 
+    }
+    
+  
+    .default {
+      background-color: $blue-50;
+      border: 2px solid $gray-100 !important;
+  
+    }
+    .select-drop-items-labels {
+  
+      padding: .5em 1em;
+      border-radius: .25rem;
+      margin: .4em .25em;
+      border: 2px solid transparent ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      &:hover {
+        background-color: $blue-50;
+      }
+  
+  
+  
+      .left-2 , .rigth{
+        display: flex;
+        
+      }
+      .bot-name {
+        font-weight: 520;
+      }
+      .selected {
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          position: relative;
+          height: 10px;
+          border-radius: 50%;
+          // left: 30px;
+          // bottom: 5px;
+          margin: 0 .5em;
+          background-color:$success-500;
+        }
+      }
+      .tab {
+        font-size: 13px;
+        font-weight: 400;
+        background-color: $gray-50;
+        color: $gray-600;
+        padding: .25em .4em;
+        border-radius: 8px;
+        margin-left: .5rem;
+  
+      }
+    }
+  }
+  
+  .select-drop-content.show {
+    display: block;
+    
+  }
+  
+  
+  .labels-grid.hide {
+    display: none;
+  }
+  
+  .options-grid {
+    display: none !important;
+  
+  } 
+  
+  .options-grid.show {
+    display: block !important;
+  
+    
+  }
+  
+  .options-default {
+    background-color: $blue-50;
+  }
+  .options {
+    padding: .2em .3em;
+    padding-left: 3em;
+    margin: .5em;
+    border-radius: 4px;
+  
+    &:hover {
+      background-color: $blue-100;
+    }
+  }
